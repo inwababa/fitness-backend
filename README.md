@@ -22,12 +22,15 @@ For existing members, it checks if the current date falls within the month for w
 
 1. Data Format
 
-Membership types are either annual or monthly, the membership table includes the adds-on and invoice as an added column for easy fetching of data to reduce excessive joining of table to improve the database query.
+Membership types are either annual or monthly, the membership table includes the adds-on and invoice as an added column for easy fetching of data in the same query, it avoids the need to perform additional database queries.
 The isFirstMonth flag indicates whether the membership is in its first month.
 Add-on services have a monthlyAmount and a dueDate. 
 
+2. Invoice Table
+Invoices data are created and saved into the invoice table when the cron job runs.
 
-2. External Integrations
+
+3. External Integrations
 
 Database: A PostgreSQL database is used to store membership, add-on, and invoice data.
 
